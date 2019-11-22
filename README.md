@@ -145,15 +145,22 @@ Review other operators: [docs](https://docs.python.org/3/library/stdtypes.html#n
 
 ### Popular and useful modules:
 * collections: Container datatypes [docs](https://docs.python.org/3/library/collections.html)
+     * `Counter(x).most_common(10)`, returns a list of tuples of the 10 most common items in the iterator `x`.
 * itertools: Functions creating iterators for efficient looping [docs](https://docs.python.org/3/library/itertools.html)
+     * `itertools.count(5,3)`, returns a generator that starts at `5` and counts by `3`.
+     * `itertools.cycle('EATING')`, returns a generator that loops over the list `[E,A,T,I,N,G]` forever
+     * `itertools.repeat(10, 15)`, returns a generator that repeats `100` `15` times.
+     * `itertools.compress('FRZG',[1,0,1,0])` , returns a generator that includes only those items that occur at the same index as 1's: `F,Z`
 * pickle: Python object serialization [docs](https://docs.python.org/3/library/pickle.html)
 * urllib: URL handling modules [docs](https://docs.python.org/3/library/urllib.html)
 * math: Mathematical functions [docs](https://docs.python.org/3/library/math.html)
      * `math.floor(3.032)` = `3.0`
      * `math.ceil(3.032)` = `4.0`
 * random: Generate pseudo-random numbers [docs](https://docs.python.org/3/library/random.html)
+     * `random.seed(212)`, sets the seed to `212` so that random results will be the same every time you call random: very useful for writing tests that rely on the random module
      * `random.choice([2,3,4])` = `3` (result is random, so your result may vary)
-     * `random.choices([2,3,4,5,6,7],k=2) = ``
+     * `random.choices([2,3,4,5,6,7],k=2)` = `[2,5]` (result is random, so your result may vary)
+     * `random.random()`, returns a number in the range 0.0 to 1.0
 * uuid: UUID objects according to RFC 4122 [docs](https://docs.python.org/3/library/uuid.html)
 * subprocess: Subprocess management [docs](https://docs.python.org/3/library/subprocess.html)
 * argparse: Parser for command-line options, arguments and sub-commands [docs](https://docs.python.org/3/library/argparse.html)
