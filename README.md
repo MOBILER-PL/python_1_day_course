@@ -254,6 +254,7 @@ Write a script that will create a range that will include the following numbers 
 
 
 ###### str: Text Sequence Type
+[docs](https://docs.python.org/3/library/stdtypes.html#string-methods)
 
 Create a string (`str`):
 `first_name = 'the house'` OR
@@ -286,11 +287,39 @@ Create a long string by joining all items in a list:
 Return a new string where the first matche of substring is replaced with newstring
 `"The only way that Steve will admit to it is if Steve is here.".replace("Steve","Jeff",1)`
 
-## Micro-Quiz 5:
-Question 1:
-Refactor the following code so that it returns "The United States of America" w whe
+Replace the words {dog_name} and {cat_name} with "Rex" and "Cleo" using Python f-string:
 
+```python
+dog_name, cat_name = ("Rex", "Cleo")
+f"{dog_name} is my dog, and {cat_name} is my cat" 
+```
 
+## Exercise #2
+The following snippet of code takes a string and magic_number and outputs an encoded verion of the string.
+
+```python
+from itertools import cycle
+
+def encode(target="The United States of America", magic_value=326):
+    """takes a string target and returns a scrambled version 
+    of the target string"""
+    secret_code = []
+    a_list = [x for x in target]
+    count = 0
+    for i in cycle(a_list):
+        count += 1
+        if count % 326==0:
+            #add to the code
+
+            secret_code.append(i)
+        if len(secret_code) == len(target):
+            break
+    return "".join(secret_code)
+```
+Based on what you know about Python so far:
+1.Determine if it would be possible to add a function that would decode 
+a string given the correct magic_number, and
+2. Write the function if it's possible OR write a short explanation why it's impossible.
 
 ### Popular and useful modules:
 * collections: Container datatypes [docs](https://docs.python.org/3/library/collections.html)
@@ -364,7 +393,7 @@ Free resources to practice programming
 * [Code Wars](https://www.codewars.com/)
 * [Project Euler](https://projecteuler.net/)
 
-## Exercise #2 (16 min.)
+## Exercise #3 (16 min.)
 
 1. **5 min**: Browse the Python standard library and choose a module that looks intersting.
 2. **10 min**: Write a small Python program that uses one of these modules.
