@@ -151,8 +151,11 @@ Review other operators: [docs](https://docs.python.org/3/library/stdtypes.html#n
      * `itertools.cycle('EATING')`, returns a generator that loops over the list `[E,A,T,I,N,G]` forever
      * `itertools.repeat(10, 15)`, returns a generator that repeats `100` `15` times.
      * `itertools.compress('FRZG',[1,0,1,0])` , returns a generator that includes only those items that occur at the same index as 1's: `F,Z`
+     * `itertools.permutations('SOS')`, returns a generator that includes all possible orderings of the input with no repeated elements.
 * pickle: Python object serialization [docs](https://docs.python.org/3/library/pickle.html)
+     * `pickle.dump(obj, file)`, takes `obj` and writes it to `file` for later retreiveal using: `pickle.load(file)`
 * urllib: URL handling modules [docs](https://docs.python.org/3/library/urllib.html)
+     * `urllib.parse.urlparse("https://www.google.com/search?term=cool+stuff&result=100")`, returns `ParseResult(scheme='https', netloc='www.google.com', path='/search', params='', query='term=cool+stuff&result=100', fragment='')`
 * math: Mathematical functions [docs](https://docs.python.org/3/library/math.html)
      * `math.floor(3.032)` = `3.0`
      * `math.ceil(3.032)` = `4.0`
@@ -162,8 +165,28 @@ Review other operators: [docs](https://docs.python.org/3/library/stdtypes.html#n
      * `random.choices([2,3,4,5,6,7],k=2)` = `[2,5]` (result is random, so your result may vary)
      * `random.random()`, returns a number in the range 0.0 to 1.0
 * uuid: UUID objects according to RFC 4122 [docs](https://docs.python.org/3/library/uuid.html)
+     * `uuid.uuid1(1222)`, returns `UUID('3c712e12-0d20-11ea-befa-0000000004c6')`, useful for generating unique identifiers on-the-fly (as needed).
 * subprocess: Subprocess management [docs](https://docs.python.org/3/library/subprocess.html)
+     * `subprocess.run(["mkdir","stuff"])`, creates a new directory named `stuff` in the current directory. Useful for running shell commands within Python.
 * argparse: Parser for command-line options, arguments and sub-commands [docs](https://docs.python.org/3/library/argparse.html)
+     * 
+file my_random_num.py
+```python
+import argparse     
+import random
+
+parser = argparse.ArgumentParser(description='Return a random number less than x')
+parser.add_argument('max_number', type=int, help='the max number from which to select a random number (0...max)')
+
+args = parser.parse_args() 
+
+result = random.choice(range(0,args.max_number))
+print(result)
+```
+run the file in the terminal
+`python3 my_random_num.py 30`
+returns a random number from 0 to 29
+
 * pathlib: Object-oriented filesystem paths [docs](https://docs.python.org/3/library/pathlib.html)
 * datetime: Basic date and time types [docs](https://docs.python.org/3/library/datetime.html)
 
