@@ -78,6 +78,7 @@ Using the above guide complete the following steps in your terminal:
 12. commit the change in the Github web interface
 13. check status of your local repo
 14. pull the changes you just made in the Github web interface to your local machine
+
 **Congraulations!**: You've learned the basics of GIT and put your knowledge to use
 
 # Enough Python to build something
