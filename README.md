@@ -136,8 +136,7 @@ True
 ```
 * context manager: An object which controls the environment seen in a with statement by defining __enter__() and __exit__() methods.
 * docstring: A string literal which appears as the first expression in a class, function or module. 
-
-
+`"""This class is for managing restaurants in the companies portfolio"""`
 
 ### Namespaces and Scopes
 The place where a variable is stored. Namespaces are implemented as dictionaries. There are the local, global and built-in namespaces as well as nested namespaces in objects
@@ -499,8 +498,45 @@ remove and return a value if key exists in `x`, otherwise return the default
 #### Other Built-in Types
 
 ##### Classes
+A class is a template that can be used to create other objects. In the following example the class `Board` is used to create an instance named `map_1`
+```python
+class Board:
 
+    map = []
+    
+    def __init__(self, height,width):
+        "Create new game boards"""
+        self.height = height
+        self.width = width
+        
+    def build_board(self):
+        "Print the game map to the terminal"""
+        for count, i in enumerate(range(0, self.height)):
+            self.map.append([])
+            for j in range(0, self.width):
+                self.map[count].append([])
 
+    def print_board(self):
+        for row in self.map:
+            print(row)
+
+map_1 = Board(10,10)
+map_1.build_board()
+map_1.print_board()
+```
+which outputs:
+```bash
+[[], [], [], [], [], [], [], [], [], []]
+[[], [], [], [], [], [], [], [], [], []]
+[[], [], [], [], [], [], [], [], [], []]
+[[], [], [], [], [], [], [], [], [], []]
+[[], [], [], [], [], [], [], [], [], []]
+[[], [], [], [], [], [], [], [], [], []]
+[[], [], [], [], [], [], [], [], [], []]
+[[], [], [], [], [], [], [], [], [], []]
+[[], [], [], [], [], [], [], [], [], []]
+[[], [], [], [], [], [], [], [], [], []]
+```
 
 ##### Functions
 
@@ -619,6 +655,10 @@ Free resources to practice programming
 ---
 # Write all sorts of tests
 Source: https://docs.pytest.org/en/latest/
+
+
+
+
 
 ## Bonus Testing Links!
 * [The Hitchhiker's Guide to Python: Testing Your Code](https://docs.python-guide.org/writing/tests/)
