@@ -185,12 +185,116 @@ Used to store collections of items
 
 `people_named_steve = ['Steve Jobs','Steve McQueen','Steve Irwin']`
 
+###### Common Operations
+
+Get the value of the first item in `a = [1,2,3]`
+`a[0]`
+
+Change the value of the last item in list `a`:
+`a[-1] = 9` or `a[2] = 9`
+
+Delete the second to last item in list `a`:
+`del a[-2]`
+
+Add an item to the end of list `a`:
+`a.append(9)`
+
+Add all the individual items in list `b = [4,5,6]` to the end of list `a`:
+`a.extend(b)`
+
+Reverse the order of items in list `a`:
+`a.reverse()`
+
+Remove the last item in `a` and assign it to `x`.
+`x = a.pop()`
+
+[Read](https://docs.python.org/3/library/stdtypes.html#mutable-sequence-types) about more operations you can do on lists.
+
 ## Micro-Quiz 3:
+Question 1:
 What will be the value of `people_named_steve` after the following operation: `people_named_steve[1][5]='k'`?
 
 1. `['Steve Jobs','Steve McQueen','Steve Irwin']`
 2. `['Steve Jobs','Stevk McQueen','Steve Irwin']`
 3. `TypeError: 'str' object does not support item assignment`
+
+Question 2:
+What will be the result of the following command `list('python')`?
+
+1. `['python']`
+2. `['p', 'y', 't', 'h', 'o', 'n']`
+3. `list index out of range`
+
+#### Immutable Sequence Types
+
+###### Tuples
+Immutable sequences (cannot be changed once created) that are used to store heterogenous items, for example unique id numbers. In addition they tend to be faster for performing certain computations versus lists.
+
+Create an empty tuple:
+`a = ()`
+
+Create a tuple with the number `3,4,5` and assign it to `a`:
+`a = 3,4,5`
+
+###### Ranges
+Immutable sequences of numbers
+
+Create a range of numbers between 0 and 100 (inclusive):
+`my_numbers = range(0,101)`
+
+Iterate through a list of 1000 digits:
+```python
+for i in range(0,1000):
+    print(i)
+```
+## Micro-Quiz 4:
+
+Question 1:
+Write a script that will create a range that will include the following numbers 1,18,35,...,341 and that has a length of 21
+
+
+###### str: Text Sequence Type
+
+Create a string (`str`):
+`first_name = 'the house'` OR
+`first_name = "the house"` OR
+`first_name = """the house"""`
+
+Make all the letters in 'kitten' uppercase:
+`"kitten".upper()`
+
+Make the title of the book correctly formatted:
+`"the bornhold superiority".title()`
+
+Check if the word 'mitten' ends with any of the strings ['ten','ton','tin']:
+`"mitten".endswith(('ten','ton','tin'))`
+
+Count how many times the string 'pot' appears in the sentence "The Potter's pot was put on the pit for potable water."
+`"The Potter's pot was put on the pit for potable water.".count("pot")`
+Why does it return 2 not 3?
+
+At what index does the word 'on' appear for the first time in the string "Elvis Donson"?
+`"Elvis Donson".find('don')`
+Returns `-1` if no match is found
+
+Check if the a string contains only numbers:
+`"alsLKJLKJDSerty34566".isalnum()`
+
+Create a long string by joining all items in a list:
+`my_name = " ".join(["George","Granders"])`
+
+Return a new string where the first matche of substring is replaced with newstring
+`"The only way that Steve will admit to it is if Steve is here.".replace("Steve","Jeff",1)`
+
+## Micro-Quiz 5:
+Question 1:
+Use the replace module to decipher the following message:
+"Burgert_Queent_ist_basedt_int_thet_largestt_shoppingt_mallt_int_thet_U.S.t_statet_oft_Georgia.t_Itt_ist_visitedt_byt_1.3t_milliont_peoplet_pert_year."
+
+Which is the correct solution?
+1. a.replace("e","rk").replace(" ","t_")
+2.
+
 
 
 ### Popular and useful modules:
