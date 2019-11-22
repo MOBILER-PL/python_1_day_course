@@ -294,6 +294,9 @@ dog_name, cat_name = ("Rex", "Cleo")
 f"{dog_name} is my dog, and {cat_name} is my cat" 
 ```
 
+Split a string into a list of tokens using `.split()`
+`the dog and pony show".split(' ')` returns `['the','dog','and','pony','show']`
+
 ## Exercise #2
 The following snippet of code takes a string and magic_number and outputs an encoded verion of the string.
 
@@ -320,6 +323,65 @@ Based on what you know about Python so far:
 1.Determine if it would be possible to add a function that would decode 
 a string given the correct magic_number, and
 2. Write the function if it's possible OR write a short explanation why it's impossible.
+
+#### Set Types
+
+##### set
+a collection of unique hashable objects i.e. strings
+
+create an empty set
+`a = set()`
+
+add an object to the set
+`a.add(object)`
+
+remove an element from the set
+`a.remove('1992')`
+
+remove a random (non specific) element from the set
+`a.pop()`
+
+collect unique letters in a string
+`unique_letters = set([a for a in "this is a long sentence with many words"])`
+
+iterate over items in a set
+```python
+for i in set([1,2,2,2,2,2,3,4]):
+    print(i)
+```
+check if `99-v` exists in the set `x`:
+`"99-v" in x`
+
+get the number of items in the set `x`:
+`len(x)`
+
+confirm that the set `x` has no elements in common with the set `y`:
+`x.isdisjoint(y)`
+
+merge sets together
+`a.union(b)`
+
+return a new set that contains elements in `a` that are not in sets `b`, `c` or `d`:
+```python
+a = set([1,2,3,9,13])
+b = set([2,3,4,11,29])
+c = set([3,4,5,11,59])
+d = set([5,6,7,22])
+a.difference(b,c,d)
+```
+
+#### Mapping Types
+
+##### dict
+Maps hashable values i.e. strings to various objects
+*If an item is not hashable it cannot be used as a dict key*
+
+Create an empty dictionary
+`d = dict()` OR
+`d = {}`
+
+
+
 
 ### Popular and useful modules:
 * collections: Container datatypes [docs](https://docs.python.org/3/library/collections.html)
