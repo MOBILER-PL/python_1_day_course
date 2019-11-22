@@ -288,12 +288,7 @@ Return a new string where the first matche of substring is replaced with newstri
 
 ## Micro-Quiz 5:
 Question 1:
-Use the replace module to decipher the following message:
-"Burgert_Queent_ist_basedt_int_thet_largestt_shoppingt_mallt_int_thet_U.S.t_statet_oft_Georgia.t_Itt_ist_visitedt_byt_1.3t_milliont_peoplet_pert_year."
-
-Which is the correct solution?
-1. a.replace("e","rk").replace(" ","t_")
-2.
+Refactor the following code so that it returns "The United States of America" w whe
 
 
 
