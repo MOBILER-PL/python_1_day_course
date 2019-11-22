@@ -150,7 +150,10 @@ Review other operators: [docs](https://docs.python.org/3/library/stdtypes.html#n
 * urllib: URL handling modules [docs](https://docs.python.org/3/library/urllib.html)
 * math: Mathematical functions [docs](https://docs.python.org/3/library/math.html)
      * `math.floor(3.032)` = `3.0`
-* random: Generate pseudo-random numbers [docs](random — Generate pseudo-random numbers)
+     * `math.ceil(3.032)` = `4.0`
+* random: Generate pseudo-random numbers [docs](https://docs.python.org/3/library/random.html)
+     * `random.choice([2,3,4])` = `3` (result is random, so your result may vary)
+     * `random.choices([2,3,4,5,6,7],k=2) = ``
 * uuid: UUID objects according to RFC 4122 [docs](https://docs.python.org/3/library/uuid.html)
 * subprocess: Subprocess management [docs](https://docs.python.org/3/library/subprocess.html)
 * argparse: Parser for command-line options, arguments and sub-commands [docs](https://docs.python.org/3/library/argparse.html)
