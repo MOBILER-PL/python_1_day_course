@@ -86,12 +86,102 @@ Using the above guide complete the following steps in your terminal:
 # Enough Python to build something
 Source: https://docs.python.org/3/
 
+## Python Glossary
+[docs](https://docs.python.org/3/glossary.html)
+
+Review the following terms and get to know them they are crucial to understanding Python
+* argument: A value passed to a function (or method) when calling the function
+`print('stuff')`, the argument is the string 'stuff'
+* attribute: A value associated with an object which is referenced by name using dotted expressions.
+* binary file: A file object able to read and write bytes-like objects. 
+* class: A template for creating user-defined objects.
+```python
+class Restaurant:
+
+    company_name = "International Investing"
+    name = ""
+    r_type = ""
+    hours = ""
+    property_value = 0.00
+
+    def __init__(self, name, r_type,hours,property_value):
+        self.name = name
+        self.r_type = r_type
+        self.hours = hours
+        self.property_value = property_value
+
+    def investment_report(self):
+        print(f"Investor:{self.company_name}")
+        print(f"Restaurant name: {self.name}")
+        print(f"Restaurant type: {self.r_type}")
+        print(f"Operating hours: {self.hours}")
+        print(f"Total Value: ${self.property_value}")
+
+Chochkies = Restaurant("Joff's","Casual","8:00 to 21:00","1567121")
+```
+running `Chochkies.investment_report()` results in the following output:
+```python
+Investor:International Investing
+Restaurant name: Joff's
+Restaurant type: Casual
+Operating hours: 8:00 to 21:00
+Total Value: $1567121
+```
+* coercion: The implicit conversion of an instance of one type to another during an operation which involves two arguments of the same type.
+In the following example a float is added to an int and the result is a sum of the two numbers expressed as a float
+```bash
+>>> 3.0 + 3 == 6.0
+True
+```
+* context manager: An object which controls the environment seen in a with statement by defining __enter__() and __exit__() methods.
+* docstring: A string literal which appears as the first expression in a class, function or module. 
+
+
+
+### Namespaces and Scopes
+The place where a variable is stored. Namespaces are implemented as dictionaries. There are the local, global and built-in namespaces as well as nested namespaces in objects
+[source]()
+
+Global namespace
+Objects in this namespace are available to any other objects in your project
+```python
+a_global_object = "a few words"
+
+def print_stuff():
+    print(a_global_object)
+
+print_stuff()
+```
+running the above code outputs the following:
+`a few words`
+
+Local namespace
+Objects in the local namespace are only available to other objects in this namespace
+```python
+def write_string(string):
+    glue_word = "stuff"
+    return string + glue_word
+    
+print(glue_word)
+```
+running the above code outputs the following:
+```python
+Traceback (most recent call last):
+  File "scripts.py", line 21, in <module>
+    print(glue_word)
+NameError: name 'glue_word' is not defined
+```
+
+
+
 ## Standard Library
 This includes all of the modules that are installed with Python
 [explore it](https://docs.python.org/3/library/index.html)
 
 ### Built-in Types
 [docs](https://docs.python.org/3/library/stdtypes.html), [wikipedia](https://en.wikipedia.org/wiki/Type_system)
+
+
 
 #### True or False?
 Assign the value of x to 4
