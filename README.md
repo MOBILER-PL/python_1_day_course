@@ -121,7 +121,18 @@ Source: [docs](https://docs.python.org/3/library/stdtypes.html#boolean-operation
 `is` object identity
 `is not` negated object identity
 
+
 Source: [docs](https://docs.python.org/3/library/stdtypes.html#comparisons)
+
+## Quiz A:
+
+What will be the value of `a`?
+`a = 9 | a > 3 < 1000 > 0.4 < 3 < 9`
+a. True
+b. False
+c. 9
+d. 9.0
+e. error
 
 #### Numeric types
 * `int()`, integers (i.e. 0,12343,-12234) [docs](https://docs.python.org/3/library/functions.html#int)
@@ -217,13 +228,11 @@ Free resources to practice programming
 * [Code Wars](https://www.codewars.com/)
 * [Project Euler](https://projecteuler.net/)
 
-## Exercise #2
-(5 min.)
-1. Browse the Python standard library and choose a module that looks intersting.
-(10 min.)
-2. Write a small Python program that uses one of these modules.
-(1 min.)
-3. Present your script and results to the class.
+## Exercise #2 (16 min.)
+
+1. **5 min**: Browse the Python standard library and choose a module that looks intersting.
+2. **10 min**: Write a small Python program that uses one of these modules.
+3. **1 min**: Present your script and results to the class.
 
 ---
 # Write all sorts of tests
