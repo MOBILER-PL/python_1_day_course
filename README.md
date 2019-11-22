@@ -26,6 +26,7 @@ A very short workshop that will teach you the essentials required to get started
 
 #  Git: Init, Add, Commit, Push, Pull & More!
 Source: https://git-scm.com/doc
+[Official book (free)](https://git-scm.com/book/en/v2)
 
 ## Requirements for this module
 * [Download and Install Git](https://git-scm.com/downloads)
