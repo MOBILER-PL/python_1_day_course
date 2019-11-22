@@ -84,9 +84,28 @@ Using the above guide complete the following steps in your terminal:
 # Enough Python to build something
 Source: https://docs.python.org/3/
 
+## Standard Library
+This includes all of the modules that are installed with Python
+[explore it](https://docs.python.org/3/library/index.html)
+
+### Built-in Types
+Concept of [Types](https://en.wikipedia.org/wiki/Type_system) explained on Wikipedia
 
 
 
+
+### Popular and useful modules:
+* collections: Container datatypes [docs](https://docs.python.org/3/library/collections.html)
+* itertools: Functions creating iterators for efficient looping [docs](https://docs.python.org/3/library/itertools.html)
+* pickle: Python object serialization [docs](https://docs.python.org/3/library/pickle.html)
+* urllib: URL handling modules [docs](https://docs.python.org/3/library/urllib.html)
+* math: Mathematical functions [docs](https://docs.python.org/3/library/math.html)
+* random: Generate pseudo-random numbers [docs](random — Generate pseudo-random numbers)
+* uuid: UUID objects according to RFC 4122 [docs](https://docs.python.org/3/library/uuid.html)
+* subprocess: Subprocess management [docs](https://docs.python.org/3/library/subprocess.html)
+* argparse: Parser for command-line options, arguments and sub-commands [docs](https://docs.python.org/3/library/argparse.html)
+* pathlib: Object-oriented filesystem paths [docs](https://docs.python.org/3/library/pathlib.html)
+* datetime: Basic date and time types [docs](https://docs.python.org/3/library/datetime.html)
 
 
 ## Bonus Python Links!
