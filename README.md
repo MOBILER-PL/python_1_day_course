@@ -27,7 +27,10 @@ A very short workshop that will teach you the essentials required to get started
 #  Git: Init, Add, Commit, Push, Pull & More!
 Source: https://git-scm.com/doc
 
-## Task: Learn how and when to use these GIT commands:
+## Requirements for this module
+* [Download and Install Git](https://git-scm.com/downloads)
+
+## Task: Get comfortable using Git from the command line
 ### General Stuff
 * ```git --version``` print the current version of git
 * ```git --help``` print list of common commands
@@ -47,17 +50,15 @@ Source: https://git-scm.com/doc
 * ```git branch -d <name>``` delete a branch
 * ```git merge <name>``` merge changes from named branch to current branch
 * ```git switch <name>``` switch to a different branch
-### Edit commits
-
-### Connect Local repo to remote repo
-* ```git remote add <remote_name> <remote_url>```
 ### History
 * ```git log``` view list of most recent commits
+### Edit messages
+* ```git commit --amend -m "new commit text"``` edit a previous commit 
+### Connect Local repo to remote repo
+* ```git remote add <remote_name> <remote_url>```
 ### Other useful commands
 * ```git stash -u``` save your progress without creating a commit (great for quick fixes)
 * ```git gui``` start the git GUI interface
-
-
 
 # Enough Python to build something
 Source: https://docs.python.org/3/
