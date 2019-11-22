@@ -195,7 +195,18 @@ returns a random number from 0 to 29
      * `Path('X').glob('*.txt*)`, returns all files within the path `X` that end in `.txt`
      * `Path('X').glob('**/*.txt'))`, returns all paths in directories and subdirectories in the path `X` that end in `.txt`.
 * datetime: Basic date and time types [docs](https://docs.python.org/3/library/datetime.html)
+     *
+Calculate the number of days until the US presidential election in 2020
+```python
+import time
+from datetime import date
 
+today = date.today()
+us_election = date(today.year+1, 11, 01) # November 1st 2020
+days_until_election = abs(us_election - today)
+print(days_until_election
+```
+, results in the answer `347 days, 0:00:0`
 
 ## Bonus Python Links!
 Free resources to practice programming
