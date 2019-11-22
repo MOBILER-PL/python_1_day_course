@@ -32,6 +32,7 @@ Source: https://git-scm.com/doc
 * ```git --version``` print the current version of git
 * ```git --help``` print list of common commands
 * ```git clone <url>``` clone a remote repo to current dir
+* ```git pull <branch> <remoteurl/remotename>``` get the latest version of your project from your repo
 ### From Start to Pushing your first commit
 * ```git init``` initialize the current directory as a git project
 * ```git config --global user.email "first.last@example.com"``` set your git email
@@ -39,17 +40,24 @@ Source: https://git-scm.com/doc
 * ```git status``` print the current state of your git project
 * ```git add .``` add all the files in the current directory to your git project
 * ```git commit -m "updated README.md"``` create a new commit, and include a message
-* ```git pull``` get the latest version of your project from your repo
-* ```git push origin <name>``` push your new branch to your repo
+* ```git push <remoteurl/remotename> <branch>``` push your new branch to your repo
 ### Branches
 * ```git branch``` lists all the branches in the current git project
 * ```git checkout -b <name>``` create a new branch and switch to it
 * ```git branch -d <name>``` delete a branch
 * ```git merge <name>``` merge changes from named branch to current branch
+* ```git switch <name>``` switch to a different branch
 ### Edit commits
 
 ### Connect Local repo to remote repo
 * ```git remote add <remote_name> <remote_url>```
+### History
+* ```git log``` view list of most recent commits
+### Other useful commands
+* ```git stash -u``` save your progress without creating a commit (great for quick fixes)
+* ```git gui``` start the git GUI interface
+
+
 
 # Enough Python to build something
 Source: https://docs.python.org/3/
