@@ -666,7 +666,7 @@ We will try to touch on all three, but at least 60% of our time in this module w
 ## What is Pytest?
 A testing framework that helps make it "easy to write small tests, yet scales to support complex functional testing..." (docs.pytest.org)
 
-A Bare-bones test example
+### A Bare-bones test example
 ```python
 def skip_every_other_letter(string):
     return string
@@ -695,19 +695,137 @@ E         + o
 
 test_app.py:6: AssertionError
 ======================================== 1 failed in 0.06s =========================================
-(venv) marcin@marcin-HP-15-Notebook-PC ~/P/s/section_3_testing> 
+(venv) >
 ```
 the function is refactored
 ```python
-
+def skip_every_other_letter(string):
+    limited = ""
+    keep = range(0,len(string),2)
+    for i in keep:
+        limited+=string[i]
+    return limited
 ```
+and test is re-run
+```bash
+(venv) > pytest
+======================================= test session starts ========================================
+platform linux -- Python 3.6.8, pytest-5.3.0, py-1.8.0, pluggy-0.13.1
+rootdir: /home/section_3_testing
+collected 1 item                                                                                   
 
+test_app.py .                                                                                [100%]
+
+======================================== 1 passed in 0.01s =========================================
+```
+### Assert that a specific exception is raised
+```python
+import pytest
+
+def divide_by_zero():
+    return 10/0
+
+
+def test_divide_by_zero():
+    with pytest.raises(ZeroDivisionError):
+        divide_by_zero()
+```
+running Pytest now returns the following
+```bash
+(venv) > pytest
+======================================= test session starts ========================================
+platform linux -- Python 3.6.8, pytest-5.3.0, py-1.8.0, pluggy-0.13.1
+rootdir: /home/section_3_testing
+collected 2 items                                                                                  
+
+test_2.py .                                                                                  [ 50%]
+test_app.py .                                                                                [100%]
+
+======================================== 2 passed in 0.02s =========================================
+```
+### Reduce clutter, use Classes to group tests
+
+```python
+class TestClass:
+    def test_a(self):
+        x = 23232
+        assert '32' in str(x)
+
+    def test_b(self):
+        x = "rta"
+        assert x[-1] == 'a'
+```
+call the test specifying the file
+```bash
+(venv) > pytest -q test_2.py
+..                                                                                           [100%]
+2 passed in 0.01s
+```
+## Exercise #4: (30 min)
+1. Write 10 tests for functions that you'd like to develop
+2. Run pytest
+3. Watch all your tests fail
+4. Develop your functions until all your tests pass
+
+**TIP:** See how far you can take Pytest by reading this
 
 ## Bonus Testing Links!
 * [The Hitchhiker's Guide to Python: Testing Your Code](https://docs.python-guide.org/writing/tests/)
 
 # Working with databases
-Source: https://docs.mongodb.com/
+
+## SQLite
+[Source](https://sqlite.org/index.html)
+[Installation Instructions](https://sqlite.org/index.html)
+
+According to the official docs "SQLite is the most used database engine in the world..."
+
+### Run Sqlite3:
+```bash
+$ sqlite3
+SQLite version 3.22.0 2018-01-22 18:45:57
+Enter ".help" for usage hints.
+Connected to a transient in-memory database.
+Use ".open FILENAME" to reopen on a persistent database.
+sqlite> 
+```
+
+### Import sqlite3 then connect, create, and save a new database table
+```python
+import sqlite3
+
+conn = sqlite3.connect("operations.db")
+
+c = conn.cursor()
+
+# Create the menu table
+c.execute('''CREATE TABLE menu (item text, price real, ingredients text, calories real)''')
+
+# Insert a few rows of data
+new_menu_items = [['Ice Cream',2.34,'sugar,water,salt',109],['Brownie',4.50,'sugar,chocolate powder',340],['Hamburger',12.50,'90% Beef,salt,sugar',12000],['Taco',7.00,'Cheese,corn tortilla,chicken,onion',6000],['Cola',2.99,'sugar,water',1200]]
+
+for item in new_menu_items:
+    c.execute(f"INSERT INTO menu VALUES ({item[0]},{item[1]},{item[2]},{item[3]})")
+
+# commit your chanegs
+conn.commit
+
+# close the database
+```
+### Query a database table
+```python
+import sqlite3
+
+conn = sqlite3.connect('operations.db')
+c = conn.cursor()
+
+for row in c.execute('SELECT * FROM menu'):
+    print(row)
+```
+
+## MongoDB
+[Source](https://docs.mongodb.com/)
+[Installation Instructions](https://docs.mongodb.com/manual/installation/#tutorial-installation)
 
 ## Bonus Database Links!
 * [The Little MongoDB Book](https://www.openmymind.net/mongodb.pdf)
