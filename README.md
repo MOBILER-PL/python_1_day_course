@@ -89,8 +89,42 @@ This includes all of the modules that are installed with Python
 [explore it](https://docs.python.org/3/library/index.html)
 
 ### Built-in Types
-Concept of [Types](https://en.wikipedia.org/wiki/Type_system) explained on Wikipedia
+[docs](https://docs.python.org/3/library/stdtypes.html), [wikipedia](https://en.wikipedia.org/wiki/Type_system)
 
+#### True or False?
+Assign the value of x to 4
+`x = 4`
+All objects in Python can be tested for their truth value:
+`if x:
+     do stuff`
+     
+An object will return False if it is empty, or if it is a `__bool__` method that returns False   
+
+Source: [docs](https://docs.python.org/3/library/stdtypes.html#truth-value-testing")
+
+#### Boolean Operations (or, and, not)
+`x or y` if x is false, then y, else x
+`x and y` if x is false, then x else y
+`not x` if x is false, then True, else False
+
+Source: [docs](https://docs.python.org/3/library/stdtypes.html#boolean-operations-and-or-not)
+
+#### Comparison operators
+`<` less than
+`>` greater than
+`<=` less than or equal to
+`>=` greater than or equal to
+`==` equal
+`!=` not equal
+`is` object identity
+`is not` negated object identity
+
+Source: [docs](https://docs.python.org/3/library/stdtypes.html#comparisons)
+
+#### Numeric types
+* `int()`, integers (i.e. 0,12343,-12234) [docs](https://docs.python.org/3/library/functions.html#int)
+* `float()`, floating-point numbers (i.e. 1.0,-3.878) [docs](https://docs.python.org/3/library/functions.html#float)
+* `complex()`, complex numbers (i.e. (x+1)<sup>2</sup>=-9) [docs](https://docs.python.org/3/library/functions.html#complex) [wikipedia](https://en.wikipedia.org/wiki/Complex_number)
 
 
 
