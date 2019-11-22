@@ -119,8 +119,9 @@ class Restaurant:
 
 Chochkies = Restaurant("Joff's","Casual","8:00 to 21:00","1567121")
 ```
-running `Chochkies.investment_report()` results in the following output:
-```python
+calling investment_report on on instance of the Restaurant class:
+```bash
+>>> Chochkies.investment_report()
 Investor:International Investing
 Restaurant name: Joff's
 Restaurant type: Casual
