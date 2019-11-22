@@ -24,6 +24,7 @@ A very short workshop that will teach you the essentials required to get started
 * Register for a free account at [Heroku](https://www.heroku.com/)
 * Register for a free acount at [Github](https://github.com/)
 
+---
 #  Git: Init, Add, Commit, Push, Pull & More!
 Source: https://git-scm.com/doc
 
@@ -81,6 +82,7 @@ Using the above guide complete the following steps in your terminal:
 
 **Congraulations!**: You've learned the basics of GIT and put your knowledge to use
 
+---
 # Enough Python to build something
 Source: https://docs.python.org/3/
 
@@ -202,7 +204,7 @@ import time
 from datetime import date
 
 today = date.today()
-us_election = date(today.year+1, 11, 01) # November 1st 2020
+us_election = date(today.year+1, 11, 1) # November 1st 2020
 days_until_election = abs(us_election - today)
 print(days_until_election
 ```
@@ -215,6 +217,15 @@ Free resources to practice programming
 * [Code Wars](https://www.codewars.com/)
 * [Project Euler](https://projecteuler.net/)
 
+## Exercise #2
+(5 min.)
+1. Browse the Python standard library and choose a module that looks intersting.
+(10 min.)
+2. Write a small Python program that uses one of these modules.
+(1 min.)
+3. Present your script and results to the class.
+
+---
 # Write all sorts of tests
 Source: https://docs.pytest.org/en/latest/
 
