@@ -387,6 +387,9 @@ a = [1,2,3,4,5]
 b = ['steve','joe','mark','susan','tom']
 {a[count]:b[count] for count,i in enumerate(b)}
 ```
+return a view of the dicts values
+`x.values()`
+
 return a list of all keys in dict `x`:
 `list(x)`
 
@@ -402,7 +405,47 @@ return the value of key 'stuff' if exists in dict `x`, otherwise return 'no resu
 remove and return a value if key exists in `x`, otherwise return the default
 `x.pop('stuff','missing')`
 
+#### Other Built-in Types
 
+##### Classes
+
+
+
+##### Functions
+
+create an empty function
+```python
+def useless_function():
+     """this doesn't do anything useful"""
+     pass
+```
+create a function that returns the first two and last two characters in a string
+```python
+def bookends(string, size=2):
+    """for a given string return the first size and last size characters
+    if the string is less than size*2 characters long return None"""
+    result = None
+    if len(string) >= size*2:    
+        result = (string[0:size],string[-size:])
+    return result    
+```
+create a function that is decorated by another function (this is very powerful)
+
+
+##### Generators
+create a generator that returns numbers from a range, and when it runs out of numbers it prints a message
+```python
+def number_grow(start,end,message=None):
+    for i in range(start, end, message):
+        yield i
+    print(message)
+```
+initialize the above generator function and pass the parameters start, end, and message
+```python
+my_numbers = number_grow(1,3,'wow!')
+# call next on the generator
+next(my_numbers)
+```
 
 ### Popular and useful modules:
 * collections: Container datatypes [docs](https://docs.python.org/3/library/collections.html)
