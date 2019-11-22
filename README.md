@@ -126,6 +126,21 @@ Source: [docs](https://docs.python.org/3/library/stdtypes.html#comparisons)
 * `float()`, floating-point numbers (i.e. 1.0,-3.878) [docs](https://docs.python.org/3/library/functions.html#float)
 * `complex()`, complex numbers (i.e. (x+1)<sup>2</sup>=-9) [docs](https://docs.python.org/3/library/functions.html#complex) [wikipedia](https://en.wikipedia.org/wiki/Complex_number)
 
+Source:[docs](https://docs.python.org/3/library/stdtypes.html#numeric-types)
+
+##### Operations
+* `x+y`, Add two numbers together
+* `x-y`, Subtract two numbers
+* `x*y`, Multiply two numbers
+* `x/y`, Divide two numbers
+* `x%y`, return remainder of x/y
+* `abs(x)`, absolute value of x
+* `int(x)`, convert x to an interger
+* `float(x)`, convert x to a float
+* `complex(re, im)`, create a complex number where re=real portion and im=imaginary
+* `x ** y`, x to the power of y
+
+Review other operators: [docs](https://docs.python.org/3/library/stdtypes.html#numeric-types)
 
 
 ### Popular and useful modules:
@@ -134,6 +149,7 @@ Source: [docs](https://docs.python.org/3/library/stdtypes.html#comparisons)
 * pickle: Python object serialization [docs](https://docs.python.org/3/library/pickle.html)
 * urllib: URL handling modules [docs](https://docs.python.org/3/library/urllib.html)
 * math: Mathematical functions [docs](https://docs.python.org/3/library/math.html)
+     * `math.floor(3.032)` = `3.0`
 * random: Generate pseudo-random numbers [docs](random — Generate pseudo-random numbers)
 * uuid: UUID objects according to RFC 4122 [docs](https://docs.python.org/3/library/uuid.html)
 * subprocess: Subprocess management [docs](https://docs.python.org/3/library/subprocess.html)
