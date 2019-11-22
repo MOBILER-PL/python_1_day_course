@@ -183,11 +183,17 @@ args = parser.parse_args()
 result = random.choice(range(0,args.max_number))
 print(result)
 ```
+
 run the file in the terminal
+
 `python3 my_random_num.py 30`
+
 returns a random number from 0 to 29
 
 * pathlib: Object-oriented filesystem paths [docs](https://docs.python.org/3/library/pathlib.html)
+     * `Path('X').exists()`, returns True if the path `X` exists
+     * `Path('X').glob('*.txt*)`, returns all files within the path `X` that end in `.txt`
+     * `Path('X').glob('**/*.txt'))`, returns all paths in directories and subdirectories in the path `X` that end in `.txt`.
 * datetime: Basic date and time types [docs](https://docs.python.org/3/library/datetime.html)
 
 
