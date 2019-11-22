@@ -55,11 +55,36 @@ Source: PIZZA!
 # Flask 1: A Web app in an hour
 Source: https://flask.palletsprojects.com/en/1.1.x/
 
-## Bonus: Flask Security
+## Bonus: Flask Extensions
+### Flask Security
 Source: https://pythonhosted.org/Flask-Security/
+### Flask Testing
+Source: https://pythonhosted.org/Flask-Testing/
 
 # Flask 2: A Rest API in an hour
 Source: https://flask-restful.readthedocs.io/en/latest/
 
 # Deploy Flask App to Heroku 
 Source: https://github.com/datademofun/heroku-basic-flask
+
+---
+# Free Stuff
+## Books
+* [Long list of programming books](https://github.com/EbookFoundation/free-programming-books/blob/master/free-programming-books.md#python)
+
+## Tools
+
+### IDE
+* [Visual Studio Code](https://code.visualstudio.com/)
+
+### Networking
+* [Wireshark: network protocol analyzer](https://www.wireshark.org)
+
+## Labs/Environment
+### Pen Testing
+* [Hack the Box: Pen-Testing Labs](https://www.hackthebox.eu/)
+
+### Machine Learning
+* [Google Colab: Includes free GPU time*](https://colab.research.google.com/)
+*Free GPU limited to 12-hours per month
+
