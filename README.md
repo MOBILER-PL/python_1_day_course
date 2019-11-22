@@ -656,8 +656,51 @@ Free resources to practice programming
 # Write all sorts of tests
 Source: https://docs.pytest.org/en/latest/
 
+We will primarily focus on the following testing types in this course:
+* Unit testing [wikipedia](https://en.wikipedia.org/wiki/Unit_testing),test individual functions, modules, and classes
+* Integration testing [wikipedia](https://en.wikipedia.org/wiki/Integration_testing),combining individual objects together and testing them as a group
+* Acceptance testing [wikipedia](https://en.wikipedia.org/wiki/Acceptance_testing),a suite of tests designed to verify that the software meets the requirements specified by the team. One example is testing an application by interacting with it from the front-end (via Chrome) instead of through API calls.
 
+We will try to touch on all three, but at least 60% of our time in this module will be spent on unit testing using Pytest.
 
+## What is Pytest?
+A testing framework that helps make it "easy to write small tests, yet scales to support complex functional testing..." (docs.pytest.org)
+
+A Bare-bones test example
+```python
+def skip_every_other_letter(string):
+    return string
+
+def test_skip_every_other_letter():
+    assert skip_every_other_letter('doe') == 'o'
+```
+the test is then run:
+```bash
+(venv) mr> pytest
+======================================= test session starts ========================================
+platform linux -- Python 3.6.8, pytest-5.3.0, py-1.8.0, pluggy-0.13.1
+rootdir: /home/section_3/
+collected 1 item                                                                                   
+
+test_app.py F                                                                                [100%]
+
+============================================= FAILURES =============================================
+___________________________________ test_skip_every_other_letter ___________________________________
+
+    def test_skip_every_other_letter():
+>       assert skip_every_other_letter('doe') == 'o'
+E       AssertionError: assert 'doe' == 'o'
+E         - doe
+E         + o
+
+test_app.py:6: AssertionError
+======================================== 1 failed in 0.06s =========================================
+(venv) marcin@marcin-HP-15-Notebook-PC ~/P/s/section_3_testing> 
+```
+the function is refactored
+```python
+
+```
 
 
 ## Bonus Testing Links!
