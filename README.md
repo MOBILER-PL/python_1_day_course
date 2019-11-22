@@ -88,3 +88,5 @@ Source: https://github.com/datademofun/heroku-basic-flask
 * [Google Colab: Includes free GPU time*](https://colab.research.google.com/)
 *Free GPU limited to 12-hours per month
 
+## Data sets
+[Big Data: 33 Brilliant and Free Data Sources anyone can use](https://www.forbes.com/sites/bernardmarr/2016/02/12/big-data-35-brilliant-and-free-data-sources-for-2016/)
