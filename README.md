@@ -27,6 +27,30 @@ A very short workshop that will teach you the essentials required to get started
 #  Git: Init, Add, Commit, Push, Pull & More!
 Source: https://git-scm.com/doc
 
+## Task: Learn how and when to use these GIT commands:
+### General Stuff
+* ```git --version``` print the current version of git
+* ```git --help``` print list of common commands
+* ```git clone <url>``` clone a remote repo to current dir
+### From Start to Pushing your first commit
+* ```git init``` initialize the current directory as a git project
+* ```git config --global user.email "first.last@example.com"``` set your git email
+* ```git config --global user.name "first_name last_name"``` set your git name
+* ```git status``` print the current state of your git project
+* ```git add .``` add all the files in the current directory to your git project
+* ```git commit -m "updated README.md"``` create a new commit, and include a message
+* ```git pull``` get the latest version of your project from your repo
+* ```git push origin <name>``` push your new branch to your repo
+### Branches
+* ```git branch``` lists all the branches in the current git project
+* ```git checkout -b <name>``` create a new branch and switch to it
+* ```git branch -d <name>``` delete a branch
+* ```git merge <name>``` merge changes from named branch to current branch
+### Edit commits
+
+### Connect Local repo to remote repo
+* ```git remote add <remote_name> <remote_url>```
+
 # Enough Python to build something
 Source: https://docs.python.org/3/
 
