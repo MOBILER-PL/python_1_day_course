@@ -111,6 +111,14 @@ Source: [docs](https://docs.python.org/3/library/stdtypes.html#truth-value-testi
 
 Source: [docs](https://docs.python.org/3/library/stdtypes.html#boolean-operations-and-or-not)
 
+## Micro-Quiz 0:
+What will be printed to the Python console when running this line: `0 or 0 and 0 or 1`?
+
+1. False
+2. True
+3. 1
+4. 0
+
 #### Comparison operators
 `<` less than
 `>` greater than
@@ -124,15 +132,17 @@ Source: [docs](https://docs.python.org/3/library/stdtypes.html#boolean-operation
 
 Source: [docs](https://docs.python.org/3/library/stdtypes.html#comparisons)
 
-## Quiz A:
+## Micro-Quiz 1:
 
-What will be the value of `a`?
+What will be the value of `a` after running the following line in the **ipython** interpreter?
+
 `a = 9 | a > 3 < 1000 > 0.4 < 3 < 9`
-a. True
-b. False
-c. 9
-d. 9.0
-e. error
+
+1. True
+2. False
+3. 9
+4. 9.0
+5. error
 
 #### Numeric types
 * `int()`, integers (i.e. 0,12343,-12234) [docs](https://docs.python.org/3/library/functions.html#int)
@@ -154,6 +164,33 @@ Source:[docs](https://docs.python.org/3/library/stdtypes.html#numeric-types)
 * `x ** y`, x to the power of y
 
 Review other operators: [docs](https://docs.python.org/3/library/stdtypes.html#numeric-types)
+
+Extra time? Read this section: [Bitwise Operations on Integer Types](https://docs.python.org/3/library/stdtypes.html#bitwise-operations-on-integer-types)
+
+#### Mutable Sequence Types
+The types in this section can be modified in place.
+
+Modifying an item in list `x` updates the value of the item in list `x`. No new list is created.
+```python
+a = [1,2,3]
+a[0] = 9
+print(a)
+[9,2,3]
+a is a
+#True
+```
+
+##### Lists
+Used to store collections of items
+
+`people_named_steve = ['Steve Jobs','Steve McQueen','Steve Irwin']`
+
+## Micro-Quiz 3:
+What will be the value of `people_named_steve` after the following operation: `people_named_steve[1][5]='k'`?
+
+1. `['Steve Jobs','Steve McQueen','Steve Irwin']`
+2. `['Steve Jobs','Stevk McQueen','Steve Irwin']`
+3. `TypeError: 'str' object does not support item assignment`
 
 
 ### Popular and useful modules:
