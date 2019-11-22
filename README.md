@@ -373,6 +373,7 @@ a.difference(b,c,d)
 #### Mapping Types
 
 ##### dict
+[docs](https://docs.python.org/3/library/stdtypes.html#mapping-types-dict)
 Maps hashable values i.e. strings to various objects
 *If an item is not hashable it cannot be used as a dict key*
 
@@ -380,6 +381,26 @@ Create an empty dictionary
 `d = dict()` OR
 `d = {}`
 
+Combine 2 lists of keys and values into new dictionary
+```python
+a = [1,2,3,4,5]
+b = ['steve','joe','mark','susan','tom']
+{a[count]:b[count] for count,i in enumerate(b)}
+```
+return a list of all keys in dict `x`:
+`list(x)`
+
+return item `i` from dict `x`:
+`x[i]`
+
+set key to value
+`x[i] = 99`
+
+return the value of key 'stuff' if exists in dict `x`, otherwise return 'no results':
+`x.get('stuff','no results')`
+
+remove and return a value if key exists in `x`, otherwise return the default
+`x.pop('stuff','missing')`
 
 
 
