@@ -11,33 +11,49 @@ Precise Schedule
 Workshop Guidelines
 9:15-9:20
 
-Git: Init, Add, Commit, Push, Pull & More! 
+#### Git: Init, Add, Commit, Push, Pull & More! 
+
 9:20 - 10:30 
+
 Breakdown: 25min intro, 30min exercises, 15min break
 
-Enough Python to build something
+#### Enough Python to build something
+
 10:30 - 11:30
+
 Breakdown: 15min intro, 30min exercises, 15min break
 
-Write all sorts of testsprzerwa
+#### Write all sorts of tests
 
-Lunch 
+11:30 - 12:30
+
+Breakdown: 15min intro, 30min exercises, 15min break
+
+#### Lunch 
+
 13:00 - 14:00
 
-Flask 1: A Web app in an hour
+#### Flask 1: A Web app in an hour
+
 14:00 - 15:00
+
 Breakdown: 15min intro, 30min exercises, 15min break
 
-Flask 2: A Rest API in an hour
+#### Flask 2: A Rest API in an hour
+
 15:00 - 16:00
+
 Breakdown: 15min intro, 30min exercises, 15min break
 
-Deploy Flask App to Heroku
+#### Deploy Flask App to Heroku
+
 16:00 - 16:30
 
-Other course info
+#### Other course info
+
 16:30 - 16:40
 
-App Ideas: What do you want to build now?
+#### App Ideas: What do you want to build now?
+
 16:40 - 17:00
 
