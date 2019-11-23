@@ -24,7 +24,13 @@ def index():
 if __name__ == "__main__":
     app.run()
 ``` 
-4.
+4. `pip install jinja werkzeug`
+5. `pip freeze > requirements.txt`
+6. `touch Procfile'
+7.
+```
+
+```
 
 
 
